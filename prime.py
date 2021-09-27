@@ -39,22 +39,20 @@ primes = []
 
 lastPrime = 2
 run = True
-
+last_line = 2
 
 with open("data.txt", "r") as file:
     first_line = file.readline()
     for last_line in file:
         pass
 
+print(last_line)
 lastPrime = int(last_line) + 1
-f = open("data.txt", "a")
-f.write('\n')
-f.close()
 
 while run:
     if prime(lastPrime, 20) != 1:
         f = open("data.txt", "a")
         f.write(str(lastPrime) + '\n')
         f.close()
-    lastPrime += 1;
+    lastPrime += 1
 
